@@ -32,13 +32,10 @@
           formData.append("file", imageInput);
 
           try {
-            const response = await fetch(
-              "https://agri-backend-ke4f.onrender.com/img/",
-              {
-                method: "POST",
-                body: formData,
-              }
-            );
+            const response = await fetch("http://54.85.64.99:8000/docs", {
+              method: "POST",
+              body: formData,
+            });
 
             if (response.ok) {
               const result = await response.json();
